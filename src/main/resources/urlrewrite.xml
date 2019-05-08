@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!DOCTYPE urlrewrite
+    PUBLIC "-//tuckey.org//DTD UrlRewrite 3.0//EN"
+    "http://www.tuckey.org/res/dtds/urlrewrite3.0.dtd">
+
+<urlrewrite>
+    <rule>
+        <from>^/actualite.html</from>
+        <to type="redirect">/page</to>
+    </rule>
+    <rule>
+        <from>^/article.html</from>
+        <to type="redirect">/article</to>
+    </rule>
+    <rule>
+        <from>^/world.html/([a-z]+)/([0-9]+)$</from>
+        <to>/page?country=$1&amp;city=$2</to>
+    </rule>
+</urlrewrite>

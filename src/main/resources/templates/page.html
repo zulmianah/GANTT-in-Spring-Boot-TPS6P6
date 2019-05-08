@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>journal</title>
+        <meta name="description" content="Page d'acceuil montrant des articles populaires, des articles recents.">
+        <meta name="keywords" content="journals; articles; nouvels">
+        <meta name="copyright" content="zulmianah">
+        <meta name="language" content="FR">
+        <meta name="author" content="zulmianah">
+        <meta name="creationdate" content="28 Avril 2019">
+        <meta name="distribution" content="global">
+        <meta name="rating" content="general">
+        <meta name="generator" content="FreeMetaTagGenerator.com; JAVA; Heroku; maven; bootstrap; spring boot; postgresql; jquery">
+        <link href="/fonts/nunitosans.min.css" rel="stylesheet"> 
+        <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/sprite.css">
+        <link type="text/css" rel="stylesheet" href="/css/style.css"/>
+    </head>
+    <body>
+        <header id="header">
+            <!-- Nav -->
+            <div id="nav">
+                <!-- Main Nav -->
+                <div id="nav-fixed">
+                    <div class="container">
+                        <ul class="nav-menu nav navbar-nav">
+                            <li><a href="/">Actualités</a></li>
+                            <li><a href="/liste/article">Populaires</a></li>
+                            <li class="cat-1"><a href="/liste/categorie">Top cat 2</a></li>
+                        </ul>
+                        <div class="nav-btns">
+                            <button class="aside-btn"><i class="fa fa-bars"></i></button>
+                            <button class="search-btn"><i class="fa fa-search"></i></button>
+                            <div class="search-form">
+                                <form action="/recherche/article" method="GET">
+                                    <input class="search-input" type="text" name="search" placeholder="Recherche...">
+                                    <input class="search-input" value="Rechercher" type="submit" >
+                                <button class="search-close"><i class="fa fa-times"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Main Nav -->
+
+                <!-- Aside Nav -->
+                <div id="nav-aside">
+                    <!-- nav -->
+                    <div class="section-row">
+                        <ul class="nav-aside-menu">
+                            <li><a href="index-2.html">Accueil</a></li>
+                            <li><a href="about.html">Qui sommes-nous ?</a></li>
+                            <li><a href="#">Suivez nous!</a></li>
+                            <li><a href="contact.html">Nos contacts</a></li>
+                        </ul>
+                    </div>
+                    <!-- /nav -->
+
+                    <!-- widget posts -->
+                    <div class="section-row">
+                        <h3>Récemment</h3>
+                        <div class="post post-widget">
+                            <a class="post-img" href="blog-post.html"><img src="/img/article/essai.jpg" alt=""></a>
+                            <div class="post-body">
+                                <h3 class="post-title"><a href="blog-post.html">Pagedraw UI Builder Turns Your Website Design Mockup Into Code Automatically</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="nav-aside-close"><i class="fa fa-times"></i></button>
+                    <!-- /aside nav close -->
+                </div>
+                <!-- Aside Nav -->
+            </div>
+            <!-- /Nav -->
+        </header>
+        <div class="container">
+            <div class="section">
+                <div th:replace="${page}"/>
+            </div>
+        </div>
+        <footer id="footer">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="footer-widget">
+                            <ul class="footer-nav">
+                                <li><a href="#">Politique de confidentialité</a></li>
+                            </ul>
+                            <div class="footer-copyright">
+                                <span>&copy; Copyright &copy;<script type="a401edde3dfbe8aaca3af165-text/javascript">document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a> but not by </span>
+                                <span><h3>ZAORA ZULMIANAH/ANAH/60</h3></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="footer-widget">
+                                    <h3 class="footer-title">À propos</h3>
+                                    <ul class="footer-links">
+                                        <li><a href="about.html">Qui sommes-nous ?</a></li>
+                                        <li><a href="#">Suivez nous! </a></li>
+                                        <li><a href="contact.html">Nos contacts</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="footer-widget">
+                                    <h3 class="footer-title">Catégories</h3>
+                                    <ul class="footer-links">
+                                        <li><a href="category.html">Web Design</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="footer-widget">
+                            <h3 class="footer-title">Joignez notre Newsletter</h3>
+                            <div class="footer-newsletter">
+                                <form>
+                                    <input class="input" type="email" name="newsletter" placeholder="E-mail">
+                                    <button class="newsletter-btn"><i class="fa fa-paper-plane"></i></button>
+                                </form>
+                            </div>
+                            <ul class="footer-social">
+                                <div class="first">
+                                    <a href="#"><div class="sprite_face_shift"></div></a>
+                                    <a href="#"><div class="sprite_youtube_shift"></div></a>
+                                    <a href="#"><div class="sprite_twitter_shift"></div></a>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </footer>
+        <script src="/js/jquery.min.js" type="a401edde3dfbe8aaca3af165-text/javascript"></script>
+        <script src="/js/bootstrap.min.js" type="a401edde3dfbe8aaca3af165-text/javascript"></script>
+        <script src="/js/main.js" type="a401edde3dfbe8aaca3af165-text/javascript"></script>
+        <script async src="/js/googletagmanager.min.js" type="a401edde3dfbe8aaca3af165-text/javascript"></script>
+        <script type="a401edde3dfbe8aaca3af165-text/javascript">
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-23581568-13');
+        </script>
+        <script src="/js/rocket-loader.min.js" data-cf-settings="a401edde3dfbe8aaca3af165-|49" defer=""></script></body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>journal</title>
+        <meta name="description" content="Page d'acceuil montrant des articles populaires, des articles recents.">
+        <meta name="keywords" content="journals; articles; nouvels">
+        <meta name="copyright" content="zulmianah">
+        <meta name="language" content="FR">
+        <meta name="author" content="zulmianah">
+        <meta name="creationdate" content="28 Avril 2019">
+        <meta name="distribution" content="global">
+        <meta name="rating" content="general">
+        <meta name="generator" content="FreeMetaTagGenerator.com; JAVA; Heroku; maven; bootstrap; spring boot; postgresql; jquery">
+        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/simple-sidebar.min.css" rel="stylesheet">
+        <script src="/Chart.js-2.8.0/dist/Chart.min.js"></script>
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <div class="bg-light border-right" id="sidebar-wrapper">
+                <div class="sidebar-heading">JOURNAL</div>
+                <div class="list-group list-group-flush">
+                    <a href="/admin/index" class="list-group-item list-group-item-action bg-light">Tableau de bord</a>
+                    <a href="/admin/liste/article" class="list-group-item list-group-item-action bg-light">Articles</a>
+                    <a href="/admin/liste/auteur" class="list-group-item list-group-item-action bg-light">Auteurs</a>
+                    <a href="/admin/recherche/avancee" class="list-group-item list-group-item-action bg-light">Recherche avancee</a>
+                    <a href="/" class="list-group-item list-group-item-action bg-light">Voir le site</a>
+                </div>
+            </div>
+            <div id="page-content-wrapper">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="btn btn-primary" id="menu-toggle"></button>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/admin/index">Accueil <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Menu
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/admin/index">Accueil</a>
+                                    <a class="dropdown-item" href="/admin/liste/article">Articles</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/admin/deconnecter">Se deconnecter</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div th:replace="${page}"/>
+            </div>
+            <script src="/vendor/jquery/jquery.min.js"></script>
+            <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script>
+                $("#menu-toggle").click(function (e) {
+                    e.preventDefault();
+                    $("#wrapper").toggleClass("toggled");
+                });
+            </script>
+        </div>
+    </body>
+</html>

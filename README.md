@@ -1,4 +1,4 @@
-# TPS6P6
+# GANTT-in-Spring-Boot-TPS6P6
 # Web design Avril-Mai 2019
 ## Mini document d'installation
 - installer MAVEN
